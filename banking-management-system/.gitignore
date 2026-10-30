@@ -47,3 +47,5 @@ target/
 
 # Ignore application configuration
 src/main/resources/application.properties
+
+/.idea

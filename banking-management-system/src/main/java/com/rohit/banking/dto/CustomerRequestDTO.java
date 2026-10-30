@@ -3,7 +3,11 @@ package com.rohit.banking.dto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class CustomerRequestDTO {
 
     @NotBlank(message = "Full name is required")
@@ -14,6 +18,7 @@ public class CustomerRequestDTO {
     private String email;
 
     @NotBlank(message = "Phone number is required")
-    @Pattern(regexp = "[0-9] {10}", message = "phone number must contain exactly 10 digits")
+    @Pattern(regexp = "[0-9]{10}", message = "phone number must contain exactly 10 digits")
     private String phone;
+
 }
